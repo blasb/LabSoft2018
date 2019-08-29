@@ -18,6 +18,7 @@ public class MyStrategy extends Strategy {
 		while(true) {
 			if(robot.robotY > 500) robot.turnTo(90);
 			robot.ahead(100);
+			robot.ahead(100); //continuar
 		}
 	}
 	
