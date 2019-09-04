@@ -4,7 +4,7 @@ import robocode.*;
 // API help : http://robocode.sourceforge.net/docs/robocode/robocode/JuniorRobot.html
 
 
-public class LaboRobot extends JuniorRobot
+public class LaboRobot11 extends JuniorRobot
 {
 
 	private Strategy strategy = new MyStrategy(this);

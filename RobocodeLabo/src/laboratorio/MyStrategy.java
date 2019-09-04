@@ -7,7 +7,7 @@ public class MyStrategy extends Strategy {
 
 	private boolean patrullando = false;
 	
-	public MyStrategy(LaboRobot robot) {
+	public MyStrategy(LaboRobot11 robot) {
 		super(robot);
 	}
 	
@@ -21,18 +21,19 @@ public class MyStrategy extends Strategy {
 		
 		//Patrullar
 		robot.turnTo(0);
+		robot.turnGunTo(90);
 		while(true) {
 			patrullando = true;
 			if(robot.robotY < 100) {
 				//BOOOKEE
 				robot.setColors(LaboRobot.blue, LaboRobot.yellow, LaboRobot.blue, LaboRobot.yellow, LaboRobot.blue);
 				robot.turnTo(0);
+				robot.turnGunTo(90);
 			}
-			//En dos partes para que no gire apuntando a la pared.
 			if(robot.robotY > 500) {
-				robot.setColors(LaboRobot.yellow, LaboRobot.blue, LaboRobot.yellow, LaboRobot.blue, LaboRobot.yellow);
-				robot.turnTo(90);
+				//robot.setColors(LaboRobot.yellow, LaboRobot.blue, LaboRobot.yellow, LaboRobot.blue, LaboRobot.yellow);
 				robot.turnTo(180);
+				robot.turnGunTo(90);
 			}
 			robot.ahead(100);
 		}
