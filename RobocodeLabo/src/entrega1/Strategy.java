@@ -1,10 +1,10 @@
-package laboratorio;
+package entrega1;
 
 public abstract class Strategy {
 	
-	protected LaboRobot robot;
+	protected LaboRobot11 robot;
 	
-	public Strategy(LaboRobot robot) {
+	public Strategy(LaboRobot11 robot) {
 		this.robot = robot;
 	}
 	

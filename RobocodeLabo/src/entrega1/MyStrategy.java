@@ -1,6 +1,4 @@
-package laboratorio;
-
-import robocode.ScannedRobotEvent;
+package entrega1;
 
 public class MyStrategy extends Strategy {
 	
@@ -26,12 +24,11 @@ public class MyStrategy extends Strategy {
 			patrullando = true;
 			if(robot.robotY < 100) {
 				//BOOOKEE
-				robot.setColors(LaboRobot.blue, LaboRobot.yellow, LaboRobot.blue, LaboRobot.yellow, LaboRobot.blue);
+				robot.setColors(LaboRobot11.blue, LaboRobot11.yellow, LaboRobot11.blue, LaboRobot11.yellow, LaboRobot11.blue);
 				robot.turnTo(0);
 				robot.turnGunTo(90);
 			}
 			if(robot.robotY > 500) {
-				//robot.setColors(LaboRobot.yellow, LaboRobot.blue, LaboRobot.yellow, LaboRobot.blue, LaboRobot.yellow);
 				robot.turnTo(180);
 				robot.turnGunTo(90);
 			}

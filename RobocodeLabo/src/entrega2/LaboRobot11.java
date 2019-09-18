@@ -1,4 +1,4 @@
-package laboratorio;
+package entrega2;
 import robocode.*;
 
 // API help : http://robocode.sourceforge.net/docs/robocode/robocode/JuniorRobot.html
@@ -6,12 +6,15 @@ import robocode.*;
 
 public class LaboRobot11 extends JuniorRobot
 {
-
-	private Strategy strategy = new MyStrategy(this);
-
+	
+	private Strategy strategy = CornerStrategist.singleton().getStrategy(this);
+	
 	@Override	
 	public void run() {
-		strategy.run();
+		while(true) {
+			strategy = CornerStrategist.singleton().getStrategy(this);
+			strategy.run(this);
+		}
 	}
 
 	/**
@@ -19,7 +22,7 @@ public class LaboRobot11 extends JuniorRobot
 	 */
 	@Override
 	public void onScannedRobot() {
-		strategy.onScannedRobot();
+		strategy.onScannedRobot(this);
 	}
 
 	/**
@@ -27,7 +30,7 @@ public class LaboRobot11 extends JuniorRobot
 	 */
 	@Override
 	public void onHitByBullet() {
-		strategy.onHitByBullet();
+		strategy.onHitByBullet(this);
 	}
 	
 	/**
@@ -35,6 +38,6 @@ public class LaboRobot11 extends JuniorRobot
 	 */
 	@Override
 	public void onHitWall() {
-		strategy.onHitWall();
+		strategy.onHitWall(this);
 	}	
 }
